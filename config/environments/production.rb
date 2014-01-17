@@ -77,4 +77,14 @@ Cblog::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.action_mailer.default_url_options= {:host => 'localhost:3000'}
+  config.action_mailer.smtp_settings = {
+    address: "smtp.mandrillapp.com",
+    port: 587,
+    domain: "localhost:3000",
+    enable_starttls_auto: :true,
+    user_name: "cecep@41studio.com",
+    password: "swkMU9Y-lJNpXYb0IPCNAQ"
+  }
 end
